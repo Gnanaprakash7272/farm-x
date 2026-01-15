@@ -1,0 +1,3 @@
+trigger: ci
+
+This file is used to trigger the GitHub Actions workflow build-push job.
