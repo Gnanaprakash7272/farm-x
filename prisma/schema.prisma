@@ -16,8 +16,9 @@ model Farm {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  phone     String?  @unique
-  language  String?
-  createdAt DateTime @default(now())
+  id          Int      @id @default(autoincrement())
+  phone       String?  @unique
+  language    String?
+  permissions Json?
+  createdAt   DateTime @default(now())
 }
