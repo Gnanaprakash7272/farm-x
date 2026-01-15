@@ -1,26 +1,21 @@
 # Farm-X Implementation Plan
 
-Overview:
-- Implement core features from flowchart: auth, language detection, permissions, dashboard, image disease detection, cattle voice expert, gov schemes audio, weather integration, voice assistant, market prices, e-farm marketplace, community.
+Progress:
+- Phase 1: Auth, language detection, permissions, dashboard, disease detection — DONE
 
-Priority (phase 1):
-1. Authentication (mobile OTP, Aadhaar/DigiLocker placeholder)
-2. Language detection & store in user profile
-3. Permissions handling (GPS, mic, camera)
-4. Home dashboard scaffold
+Phase 2 (now):
+- Add cattle expert voice system (placeholder)
+- Add 'ask anything' AI page (placeholder server integration)
+- Add weather integration (server helper & API route)
+- Add live market prices page (placeholder)
+- Add e-farm marketplace & farmer community pages (placeholders)
 
-Phase 1 deliverables (this commit):
-- PLANNING.md (this file)
-- Prisma schema update: add User model
-- API routes: /api/auth/otp (send/verify), /api/auth/aadhaar (placeholder)
-- Frontend page: /login to perform OTP flow and detect browser language
-- Server helper: src/server/auth.js
-
-Next steps after phase 1:
-- Run prisma migrate (requires DATABASE_URL)
-- Implement permissions and dashboard UI
-- Add image-based disease detection service and model integration
-- Implement voice features and OpenAI/Apertus integration
+Files added in this commit:
+- pages/ai.js, pages/api/ai/ask.js, src/server/ai.js
+- pages/weather.js, pages/api/weather.js, src/server/weather.js
+- pages/market.js, pages/api/market.js, src/server/market.js
+- pages/marketplace.js, pages/community.js
+- pages/cattle.js, pages/api/cattle/voice.js
 
 Notes:
-- Migrations and production DB setup require DATABASE_URL; say "provide DB" to set it up.
+- Several features are placeholders and will be wired to real AI / market / weather providers in the next iteration. Provide API keys (OPENAI_API_KEY, WEATHER_API_KEY, MARKET_API_KEY) when ready.
