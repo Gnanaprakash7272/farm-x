@@ -14,3 +14,9 @@ Quickstart
 API
 
 GET /api/farm - example farm endpoint
+
+Pages added:
+- /login
+- /permissions
+- /dashboard
+- /disease (Crop & Vegetable Disease Detection)
